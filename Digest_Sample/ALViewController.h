@@ -11,5 +11,5 @@
 @interface ALViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *responseLabel;
-- (IBAction)getButton:(id)sender;
+- (IBAction)tapGetButton:(id)sender;
 @end
