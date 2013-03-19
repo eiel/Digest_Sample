@@ -51,7 +51,7 @@
     __block ALViewController *that = self;
     [_operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         //成功時
-        that.responseLabel.text = [NSString stringWithString:operation.responseString];
+        that.responseLabel.text = operation.responseString;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // 失敗時
         that.responseLabel.text = @"error";
