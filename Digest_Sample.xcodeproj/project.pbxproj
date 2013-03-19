@@ -41,6 +41,8 @@
 		90FCA0CC16F8B7E9003C6D9C /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FCA0BA16F8B7E9003C6D9C /* AFXMLRequestOperation.m */; };
 		90FCA0CD16F8B7E9003C6D9C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FCA0BC16F8B7E9003C6D9C /* UIImageView+AFNetworking.m */; };
 		90FCA0CE16F8B7E9003C6D9C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FCA0BC16F8B7E9003C6D9C /* UIImageView+AFNetworking.m */; };
+		90FCA0D316F8C7E9003C6D9C /* ALDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FCA0D216F8C7E9003C6D9C /* ALDigestAuthentication.m */; };
+		90FCA0D416F8C7E9003C6D9C /* ALDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FCA0D216F8C7E9003C6D9C /* ALDigestAuthentication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		90FCA0BA16F8B7E9003C6D9C /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		90FCA0BB16F8B7E9003C6D9C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		90FCA0BC16F8B7E9003C6D9C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		90FCA0D116F8C7E9003C6D9C /* ALDigestAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDigestAuthentication.h; path = ALDigestAuthentication/ALDigestAuthentication.h; sourceTree = "<group>"; };
+		90FCA0D216F8C7E9003C6D9C /* ALDigestAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDigestAuthentication.m; path = ALDigestAuthentication/ALDigestAuthentication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				90FCA0A916F8B7E9003C6D9C /* AFNetworking */,
+				90FCA0D016F8C758003C6D9C /* ALDigestAuthentication */,
 				90FCA07416F8ACF9003C6D9C /* Digest_Sample */,
 				90FCA09816F8ACF9003C6D9C /* Digest_SampleTests */,
 				90FCA06D16F8ACF9003C6D9C /* Frameworks */,
@@ -223,6 +228,15 @@
 			);
 			name = AFNetworking;
 			path = AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		90FCA0D016F8C758003C6D9C /* ALDigestAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				90FCA0D116F8C7E9003C6D9C /* ALDigestAuthentication.h */,
+				90FCA0D216F8C7E9003C6D9C /* ALDigestAuthentication.m */,
+			);
+			name = ALDigestAuthentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +362,7 @@
 				90FCA0C916F8B7E9003C6D9C /* AFURLConnectionOperation.m in Sources */,
 				90FCA0CB16F8B7E9003C6D9C /* AFXMLRequestOperation.m in Sources */,
 				90FCA0CD16F8B7E9003C6D9C /* UIImageView+AFNetworking.m in Sources */,
+				90FCA0D316F8C7E9003C6D9C /* ALDigestAuthentication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +380,7 @@
 				90FCA0CA16F8B7E9003C6D9C /* AFURLConnectionOperation.m in Sources */,
 				90FCA0CC16F8B7E9003C6D9C /* AFXMLRequestOperation.m in Sources */,
 				90FCA0CE16F8B7E9003C6D9C /* UIImageView+AFNetworking.m in Sources */,
+				90FCA0D416F8C7E9003C6D9C /* ALDigestAuthentication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

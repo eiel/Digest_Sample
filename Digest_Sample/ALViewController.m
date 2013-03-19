@@ -8,6 +8,7 @@
 
 #import "ALViewController.h"
 #import "AFHTTPRequestOperation.h"
+#import "ALDigestAuthentication.h"
 
 @interface ALViewController ()
 {
@@ -33,29 +34,20 @@
     [self _request];
 }
 
+#pragma mark - private methoods
 - (void)_request
 {
+    // いろんな場所で使うのであればシングルトンつくって保持させておくとよいかもね
+    ALDigestAuthentication* auth =
+        [[ALDigestAuthentication alloc] initWithUsername:@"username"
+                                             andPassword:@"password"];
+    
     // アクセス先設定
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:9292"]];
-    
-    _operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    // 認証設定
-    [_operation setAuthenticationChallengeBlock:
-     ^(NSURLConnection *connection, NSURLAuthenticationChallenge *challenge) {
-         // この if をしなかったら何回も挑戦してしまう。何度か試みたいなら適当に調整
-         if ([challenge previousFailureCount] == 0) {
-             NSURLCredential* credential =
-             [NSURLCredential credentialWithUser:@"username"
-                                        password:@"password"
-                                     persistence:NSURLCredentialPersistenceNone];
-             [[challenge sender] useCredential:credential
-                    forAuthenticationChallenge:challenge];
-         } else {
-             [[challenge sender] cancelAuthenticationChallenge:challenge];
-         }
-     }];
-    
-    // リクエストが帰ってきた時の処理の作成
+    NSURL* url = [NSURL URLWithString:@"http://localhost:9292"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    // 認証設定済みの AFHTTPRequestOperation を作成する
+    _operation = [auth httpRequestOperation:request];
+
     __block ALViewController *that = self;
     [_operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         //成功時
