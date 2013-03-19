@@ -26,4 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)getButton:(id)sender {
+    _responseLabel.text = @"hoge";
+}
 @end
