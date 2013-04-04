@@ -1,6 +1,6 @@
 # これは何
 
- Digest認証をするのに少しだけ楽する クラスを提供とそのサンプルです。
+ Digest認証をするのに少しだけ楽する クラスを提供とそのサンプルですよ。
 
 現在は [AFNetwoking](https://github.com/AFNetworking/AFNetworking) というライブラリのみに対応しています。
 
